@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断是否选中</title>
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // //方法1；JavaScript的DOM对象转为jquery对象
+            // var inputl=document.getElementsByName("input")[0];
+            // var $inputl=$(oinput);
+            // $("inputl").click(function(){
+            //     if($(this).attr("checked")){  //attr() 方法用于获取或者设置jQuery对象的属性
+            //         alert("已接受条款，可以注册！")
+            //      }
+            // })
+
+            // 方法2 jQuery对象转为DOM对象
+           inputl = $("input")[0];
+            inputl=$("input").get(0);
+            inputl.onclick=function(){
+                if(this.checked){
+                    alert("已接受条款，可以注册！")
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox" value="1" />请先阅读<a href="javascript:">条款</a>并接受
+    
+</body>
+</html>
